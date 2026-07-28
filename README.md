@@ -150,24 +150,33 @@ AReno-OPD/
 
 - Python 3.10+
 - PyTorch 2.0+
-- AReno 框架（需先安装）
+- AReno 框架（需先安装，见 [inclusionAI/AReno](https://github.com/inclusionAI/AReno)）
 
 ### 安装
+
+#### 方式一：从 PyPI 安装（待发布）
+
+```bash
+pip install areno-opd
+```
+
+#### 方式二：从源码安装
+
+```bash
+git clone https://github.com/Krystal579-max/AReno-OPD.git
+cd AReno-OPD
+pip install -e .
+```
+
+#### 方式三：合并到 AReno 主仓库
 
 ```bash
 # 克隆 AReno 主仓库
 git clone https://github.com/inclusionAI/AReno.git
 cd AReno
 
-# 安装依赖
-pip install -e .
-
-# 将本仓库的 OPD 代码合并到 AReno 中
-# 方式一：直接复制文件
+# 将 OPD 代码合并到 AReno 中
 cp -r /path/to/AReno-OPD/areno/* ./areno/
-
-# 方式二：使用 git patch
-git am /path/to/AReno-OPD.patch
 ```
 
 ### 训练脚本
